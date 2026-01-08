@@ -8,37 +8,37 @@ const members = [
     {
         name: 'SACHIN KADLI',
         role: 'Founder',
-        avatar: 'public/IMG_9975 (1).JPG',
+        avatar: '/IMG_9975 (1).JPG',
         link: '#',
     },
     {
         name: 'PRADHUDEV SAJJAN',
         role: 'Co-Founder',
-        avatar: 'public/IMG_8249.JPG',
+        avatar: '/IMG_8249.JPG',
         link: '#',
     },
     {
         name: 'SHIVANI DURG',
         role: 'Product artist',
-        avatar: 'public/IMG_0205.PNG',
+        avatar: '/IMG_0205.PNG',
         link: '#',
     },
     {
         name: 'SIDDUPRASAD',
         role: 'Editor',
-        avatar: 'public/IMG_0208.JPG',
+        avatar: '/IMG_0208.JPG',
         link: '#',
     },
     {
         name: 'VADIRAJ HABBU',
         role: 'Editor',
-        avatar: 'public/IMG_0206 (1).PNG',
+        avatar: '/IMG_0206 (1).PNG',
         link: '#',
     },
     {
         name: 'MANJUNATH NAGANAHALLI',
         role: 'Camera man',
-        avatar: 'public/IMG_0207.JPG',
+        avatar: '/IMG_0207.JPG',
         link: '#',
     },
 ];
