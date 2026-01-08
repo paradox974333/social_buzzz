@@ -3,6 +3,7 @@
 import { LayoutGroup, motion } from "motion/react"
 import { TextRotate } from "@/components/ui/text-rotate"
 import Floating, { FloatingElement } from "@/components/ui/parallax-floating"
+import { Instagram, ExternalLink, BadgeCheck } from "lucide-react"
 
 // Optimized images: Widths reduced from ~3000px to ~600px for faster loading
 const exampleImages = [
@@ -250,6 +251,43 @@ const HeroSection = () => {
           >
             🔥 Being consistent = Growth
           </motion.p>
+
+          {/* New Profile Card Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.0 }}
+            className="mt-6 pointer-events-auto"
+          >
+             <a
+              href="https://www.instagram.com/social_buzzz18/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 bg-card/60 backdrop-blur-md border border-border/50 p-2 pr-4 rounded-full shadow-sm hover:shadow-md hover:bg-card/80 transition-all duration-300 hover:scale-105"
+            >
+              {/* Instagram Gradient Icon/Avatar */}
+              <div className="relative w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center shrink-0">
+                <Instagram className="h-5 w-5 text-white" />
+              </div>
+
+              {/* Handle & Label */}
+              <div className="flex flex-col text-left">
+                <div className="flex items-center gap-1">
+                  <span className="font-bold text-sm text-foreground">
+                    social_buzzz18
+                  </span>
+                  <BadgeCheck className="h-3 w-3 text-blue-500 fill-blue-500/10" />
+                </div>
+                <span className="text-[10px] text-muted-foreground uppercase tracking-wide">
+                  Visit Profile
+                </span>
+              </div>
+
+              {/* External Arrow */}
+              <ExternalLink className="h-4 w-4 text-muted-foreground/50 group-hover:text-primary transition-colors ml-1" />
+            </a>
+          </motion.div>
+
         </div>
       </Floating>
     </section>
