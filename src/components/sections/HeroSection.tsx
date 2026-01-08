@@ -4,44 +4,45 @@ import { LayoutGroup, motion } from "motion/react"
 import { TextRotate } from "@/components/ui/text-rotate"
 import Floating, { FloatingElement } from "@/components/ui/parallax-floating"
 
+// Optimized images: Widths reduced from ~3000px to ~600px for faster loading
 const exampleImages = [
   {
-    url: "https://images.unsplash.com/photo-1727341554370-80e0fe9ad082?q=80&w=2276&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1727341554370-80e0fe9ad082?q=80&w=600&auto=format&fit=crop",
     author: "Branislav Rodman",
     title: "A Black and White Photo of a Woman Brushing Her Teeth",
   },
   {
-    url: "https://images.unsplash.com/photo-1640680608781-2e4199dd1579?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1640680608781-2e4199dd1579?q=80&w=600&auto=format&fit=crop",
     title: "Neon Palm",
     author: "Tim Mossholder",
   },
   {
-    url: "https://images.unsplash.com/photo-1726083085160-feeb4e1e5b00?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1726083085160-feeb4e1e5b00?q=80&w=600&auto=format&fit=crop",
     author: "ANDRII SOLOK",
     title: "A blurry photo of a crowd of people",
   },
   {
-    url: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?q=80&w=2838&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?q=80&w=600&auto=format&fit=crop",
     author: "Wesley Tingey",
     title: "Rippling Crystal Blue Water",
   },
   {
-    url: "https://images.unsplash.com/photo-1624344965199-ed40391d20f2?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1624344965199-ed40391d20f2?q=80&w=600&auto=format&fit=crop",
     author: "Serhii Tyaglovsky",
     title: "Mann im schwarzen Hemd unter blauem Himmel",
   },
   {
-    url: "https://images.unsplash.com/photo-1689553079282-45df1b35741b?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1689553079282-45df1b35741b?q=80&w=600&auto=format&fit=crop",
     author: "Vladimir Yelizarov",
     title: "A women with a flower crown on her head",
   },
   {
-    url: "https://images.unsplash.com/photo-1721968317938-cf8c60fccd1a?q=80&w=2728&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1721968317938-cf8c60fccd1a?q=80&w=600&auto=format&fit=crop",
     title: "A blurry photo of white flowers in a field",
     author: "Eugene Golovesov",
   },
   {
-    url: "https://images.unsplash.com/photo-1677338354108-223e807fb1bd?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1677338354108-223e807fb1bd?q=80&w=600&auto=format&fit=crop",
     author: "Mathilde Langevin",
     title: "A table topped with two wine glasses and plates",
   },
@@ -49,7 +50,7 @@ const exampleImages = [
 
 const HeroSection = () => {
   return (
-    <section className="flex w-full h-screen flex-col items-center justify-center overflow-hidden bg-background md:overflow-visible">
+    <section className="flex w-full h-screen flex-col items-center justify-center overflow-hidden bg-background md:overflow-visible relative">
       <Floating sensitivity={-0.5} className="h-full w-full">
         {/* Top left small image */}
         <FloatingElement depth={0.5} className="top-[15%] left-[2%] md:top-[8%] md:left-[11%]">
@@ -59,6 +60,7 @@ const HeroSection = () => {
             transition={{ delay: 0.5 }}
             src={exampleImages[0].url}
             alt={exampleImages[0].title}
+            loading="eager"
             className="w-16 h-12 sm:w-24 sm:h-16 md:w-28 md:h-20 lg:w-32 lg:h-24 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl sm:rounded-2xl"
           />
         </FloatingElement>
@@ -71,6 +73,7 @@ const HeroSection = () => {
             transition={{ delay: 0.7 }}
             src={exampleImages[1].url}
             alt={exampleImages[1].title}
+            loading="eager"
             className="w-40 h-28 sm:w-48 sm:h-32 md:w-56 md:h-40 lg:w-60 lg:h-44 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl sm:rounded-2xl"
           />
         </FloatingElement>
@@ -83,6 +86,7 @@ const HeroSection = () => {
             transition={{ delay: 0.9 }}
             src={exampleImages[2].url}
             alt={exampleImages[2].title}
+            loading="eager"
             className="w-40 h-28 sm:w-48 sm:h-36 md:w-56 md:h-44 lg:w-64 lg:h-48 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl sm:rounded-2xl"
           />
         </FloatingElement>
@@ -95,6 +99,7 @@ const HeroSection = () => {
             transition={{ delay: 1.1 }}
             src={exampleImages[3].url}
             alt={exampleImages[3].title}
+            loading="eager"
             className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl sm:rounded-2xl"
           />
         </FloatingElement>
@@ -107,6 +112,7 @@ const HeroSection = () => {
             transition={{ delay: 1.3 }}
             src={exampleImages[4].url}
             alt={exampleImages[4].title}
+            loading="eager"
             className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl sm:rounded-2xl"
           />
         </FloatingElement>
@@ -119,6 +125,7 @@ const HeroSection = () => {
             transition={{ delay: 1.5 }}
             src={exampleImages[5].url}
             alt={exampleImages[5].title}
+            loading="eager"
             className="w-28 h-20 sm:w-36 sm:h-24 md:w-40 md:h-28 lg:w-44 lg:h-32 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl sm:rounded-2xl"
           />
         </FloatingElement>
@@ -131,6 +138,7 @@ const HeroSection = () => {
             transition={{ delay: 1.7 }}
             src={exampleImages[6].url}
             alt={exampleImages[6].title}
+            loading="eager"
             className="w-20 h-24 sm:w-24 sm:h-32 md:w-28 md:h-36 lg:w-32 lg:h-40 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl sm:rounded-2xl"
           />
         </FloatingElement>
@@ -143,13 +151,13 @@ const HeroSection = () => {
             transition={{ delay: 1.9 }}
             src={exampleImages[7].url}
             alt={exampleImages[7].title}
+            loading="eager"
             className="w-24 h-28 sm:w-32 sm:h-40 md:w-36 md:h-44 lg:w-40 lg:h-48 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl sm:rounded-2xl"
           />
         </FloatingElement>
 
         {/* Center content */}
         <div className="z-50 flex h-full w-full flex-col items-center justify-center pointer-events-none">
-          
           {/* Highlighted Brand Name */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -190,15 +198,15 @@ const HeroSection = () => {
               </LayoutGroup>
             </motion.h1>
           </LayoutGroup>
-          
+
           <motion.p
             className="text-sm sm:text-base md:text-lg text-center text-muted-foreground mt-2 md:mt-4 max-w-md md:max-w-lg px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Professional social media management, content creation & growth strategies. 
-            Transform your online presence with Social Buzzz.
+            Professional social media management, content creation & growth
+            strategies. Transform your online presence with Social Buzzz.
           </motion.p>
 
           <motion.div
@@ -207,21 +215,25 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <a 
+            <a
               href="#services"
               onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                e.preventDefault()
+                document
+                  .getElementById("services")
+                  ?.scrollIntoView({ behavior: "smooth" })
               }}
               className="px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium text-sm sm:text-base hover:opacity-90 transition-opacity cursor-pointer"
             >
               Get Started →
             </a>
-            <a 
+            <a
               href="#services"
               onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                e.preventDefault()
+                document
+                  .getElementById("services")
+                  ?.scrollIntoView({ behavior: "smooth" })
               }}
               className="px-6 py-3 rounded-full border border-border text-foreground font-medium text-sm sm:text-base hover:bg-accent transition-colors cursor-pointer"
             >
@@ -238,7 +250,6 @@ const HeroSection = () => {
           >
             🔥 Being consistent = Growth
           </motion.p>
-          
         </div>
       </Floating>
     </section>
