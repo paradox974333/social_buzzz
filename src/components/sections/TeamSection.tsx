@@ -18,6 +18,12 @@ const members = [
         link: '#',
     },
     {
+        name: 'MANOJ L',
+        role: 'Web developer',
+        avatar: '/WhatsApp Image 2026-01-08 at 3.39.08 PM.jpeg',
+        link: '#',
+    },
+    {
         name: 'SHIVANI DURG',
         role: 'Product artist',
         avatar: '/IMG_0205.PNG',
@@ -39,12 +45,6 @@ const members = [
         name: 'MANJUNATH NAGANAHALLI',
         role: 'Camera man',
         avatar: '/IMG_0207.JPG',
-        link: '#',
-    },
-    {
-        name: 'MANOJ L',
-        role: 'Web developer',
-        avatar: '/WhatsApp Image 2026-01-08 at 3.39.08 PM.jpeg',
         link: '#',
     },
 ];
