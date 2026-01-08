@@ -44,13 +44,13 @@ const clients: Client[] = [
   },
   {
     handle: "@houseof.aadya_sarees",
-    igHandleForUrl: "houseof.raadhya_sarees",
+    igHandleForUrl: "houseof.aadhya_sarees",
     followers: "—",
     reach: "—",
     engagement: "—",
     posts: [
-      "https://www.instagram.com/reel/DQrMHg6Eu8k/",
-      "https://www.instagram.com/p/DTNOxlzkm5w/"
+      "https://www.instagram.com/houseof.aadya_sarees?igsh=MWpyYzU0OXJpd3kxZw==",
+      "https://www.instagram.com/reel/DTMx2pvERdo/?igsh=MW1oa2oxc3M5MDBtdw=="
     ]
   },
   {
