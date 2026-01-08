@@ -47,6 +47,12 @@ const members = [
         avatar: '/IMG_0207.JPG',
         link: '#',
     },
+    {
+        name: 'PRAJVALSINGH THAKUR',
+        role: 'Voice over artist',
+        avatar: '/IMG_0211.JPG',
+        link: '#',
+    },
 ];
 
 /* -------------------------------
