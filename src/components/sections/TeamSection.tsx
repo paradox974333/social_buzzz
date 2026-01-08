@@ -41,12 +41,7 @@ const members = [
         avatar: '/IMG_0206 (1).PNG',
         link: '#',
     },
-    {
-        name: 'MANJUNATH NAGANAHALLI',
-        role: 'Shoot expert',
-        avatar: '/IMG_0207.JPG',
-        link: '#',
-    },
+    
     {
         name: 'PRAJVALSINGH THAKUR',
         role: 'Voice over artist',
