@@ -34,7 +34,7 @@ const clients: Client[] = [
   {
     handle: "@nayana_collection",
     igHandleForUrl: "nayana_collection_",
-    followers: "8.5K+",
+    followers: "3.9K+",
     reach: "22K",
     engagement: "7.8%",
     posts: [
