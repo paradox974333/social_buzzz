@@ -30,6 +30,12 @@ const members = [
         link: '#',
     },
     {
+        name: 'SPOORTI MATHPATI',
+        role: 'Product artist',
+        avatar: '/IMG-20260108-WA0013.jpg',
+        link: '#',
+    },
+    {
         name: 'SIDDUPRASAD',
         role: 'Editor',
         avatar: '/IMG_0208.JPG',
