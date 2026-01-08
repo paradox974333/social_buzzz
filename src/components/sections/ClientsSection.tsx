@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Instagram, Users, Eye, TrendingUp, ExternalLink } from "lucide-react";
+import { Instagram, ExternalLink } from "lucide-react";
 
 /* -------------------------------
    Types
@@ -12,9 +12,6 @@ interface Client {
   handle: string;         // display handle
   igHandleForUrl: string; // instagram handle used for the profile link (without @)
   posts: string[];        // full Instagram post/reel URLs (public)
-  followers?: string;
-  reach?: string;
-  engagement?: string;
 }
 
 /* -------------------------------
@@ -24,9 +21,6 @@ const clients: Client[] = [
   {
     handle: "@shanta_kadlis_collection",
     igHandleForUrl: "shanta_kadlis_collection",
-    followers: "10K+",
-    reach: "25K",
-    engagement: "8.5%",
     posts: [
       "https://www.instagram.com/reel/DTKUebmkqI2/",
     ]
@@ -34,9 +28,6 @@ const clients: Client[] = [
   {
     handle: "@nayana_collection",
     igHandleForUrl: "nayana_collection_",
-    followers: "3.9K+",
-    reach: "22K",
-    engagement: "7.8%",
     posts: [
       "https://www.instagram.com/reel/DTIaPg-khVb/",
       "https://www.instagram.com/reel/DTNjnRIEkPU/"
@@ -45,9 +36,6 @@ const clients: Client[] = [
   {
     handle: "@houseof.aadya_sarees",
     igHandleForUrl: "houseof.aadhya_sarees",
-    followers: "—",
-    reach: "—",
-    engagement: "—",
     posts: [
       "https://www.instagram.com/houseof.aadya_sarees?igsh=MWpyYzU0OXJpd3kxZw==",
       "https://www.instagram.com/reel/DTMx2pvERdo/?igsh=MW1oa2oxc3M5MDBtdw=="
@@ -56,9 +44,6 @@ const clients: Client[] = [
   {
     handle: "@laxmi_saree_centre_klb",
     igHandleForUrl: "lakshmi_saree_centre_0",
-    followers: "—",
-    reach: "—",
-    engagement: "—",
     posts: [
       "https://www.instagram.com/laxmi_saree_centre_klb?igsh=MW00MHFjd3lhbzQ2cA==",
       "https://www.instagram.com/reel/DTDMG3lAnhH/?igsh=NXNmMWJieGpiY3V3"
@@ -67,9 +52,6 @@ const clients: Client[] = [
   {
     handle: "@b.nagesh_wholesale_sarees",
     igHandleForUrl: "b.nagesh_wholesale_sarees",
-    followers: "4K+",
-    reach: "—",
-    engagement: "—",
     posts: [
       "https://www.instagram.com/b.nagesh_wholesale_sarees?igsh=aGtmOWVmOWtxaDA%3D&utm_source=qr",
       "https://www.instagram.com/reel/DRtjC4wgY16/"
@@ -78,13 +60,9 @@ const clients: Client[] = [
   {
     handle: "@aaradhya_collection70",
     igHandleForUrl: "aaradhya_collection70",
-    followers: "4K+",
-    reach: "—",
-    engagement: "—",
     posts: [
       "https://www.instagram.com/aaradhya_collection70?igsh=ZG5zc3ptb2g2MWsy",
       "https://www.instagram.com/reel/DSZUJ3KEaPV/"
-      
     ]
   }
 ];
@@ -94,7 +72,7 @@ const clients: Client[] = [
 ---------------------------------*/
 const ClientsSection: React.FC = () => {
   
-  // Optimized Script Loading Logic
+  // Script Loading Logic for Instagram Embeds
   useEffect(() => {
     const processEmbeds = () => {
       try {
@@ -112,18 +90,16 @@ const ClientsSection: React.FC = () => {
       s.async = true;
       s.defer = true;
       s.onload = () => {
-        // Slight delay to ensure DOM is ready
         setTimeout(processEmbeds, 500);
       };
       document.body.appendChild(s);
     } else {
-      // If script exists, re-process directly
       processEmbeds();
     }
-  }, []); // Run once on mount
+  }, []);
 
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-950">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         
         {/* Section Header */}
@@ -133,12 +109,11 @@ const ClientsSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16 space-y-4"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-50">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-black">
             Our Happy Customers
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            See how our clients are growing their business with our collection. 
-            Live Instagram updates from their profiles.
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            See how our clients are growing their business with our collection.
           </p>
         </motion.div>
 
@@ -153,19 +128,20 @@ const ClientsSection: React.FC = () => {
               transition={{ delay: cIdx * 0.1, duration: 0.5 }}
               className="h-full" 
             >
-              <Card className="h-full flex flex-col bg-white dark:bg-slate-900 shadow-lg hover:shadow-xl transition-shadow duration-300 border-slate-200 dark:border-slate-800">
+              {/* Card Frame */}
+              <Card className="h-full flex flex-col bg-white shadow-lg border-slate-200">
                 
-                {/* 1. Header */}
-                <CardHeader className="pb-4 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
+                {/* 1. Header with Handle */}
+                <CardHeader className="pb-4 border-b border-slate-100 bg-slate-50">
                   <div className="flex items-center gap-3">
                     <div className="shrink-0 w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center shadow-sm">
                       <Instagram className="h-5 w-5 text-white" />
                     </div>
                     <div className="overflow-hidden">
-                      <CardTitle className="text-base font-bold truncate" title={client.handle}>
+                      <CardTitle className="text-base font-bold truncate text-black" title={client.handle}>
                         {client.handle}
                       </CardTitle>
-                      <p className="text-xs text-muted-foreground truncate">
+                      <p className="text-xs text-slate-500 truncate">
                         Instagram Business
                       </p>
                     </div>
@@ -174,15 +150,13 @@ const ClientsSection: React.FC = () => {
 
                 <CardContent className="flex-1 flex flex-col pt-6 gap-6">
                   
-                  {/* 2. Media Area: Scrollable 
-                      Updated: Increased height and improved scrollbar visibility 
-                  */}
-                  <div className="flex-1 min-h-[450px] max-h-[450px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-200 dark:scrollbar-thumb-slate-700 scrollbar-track-transparent rounded-md bg-slate-50 dark:bg-black/20">
+                  {/* 2. Media Area: Scrollable */}
+                  <div className="flex-1 min-h-[450px] max-h-[450px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent rounded-md bg-slate-50">
                     <div className="flex flex-col gap-4 p-1">
                       {client.posts.map((postUrl, pIdx) => (
                         <div 
                           key={`${client.handle}-post-${pIdx}`} 
-                          className="w-full flex justify-center bg-white dark:bg-black rounded border border-slate-100 dark:border-slate-800 overflow-hidden relative min-h-[300px]"
+                          className="w-full flex justify-center bg-white rounded border border-slate-100 overflow-hidden relative min-h-[300px]"
                         >
                           <blockquote
                             className="instagram-media"
@@ -200,9 +174,8 @@ const ClientsSection: React.FC = () => {
                               width: "calc(100% - 2px)" 
                             }}
                           >
-                            {/* Fallback link if JS fails */}
                             <div className="p-4 text-center">
-                              <a href={postUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-500 hover:underline">
+                              <a href={postUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">
                                 View on Instagram
                               </a>
                             </div>
@@ -212,31 +185,11 @@ const ClientsSection: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* 3. Footer: Stats & Button */}
-                  <div className="space-y-4 pt-2 border-t border-slate-100 dark:border-slate-800 mt-auto">
-                    {/* Stats Grid */}
-                    <div className="grid grid-cols-3 gap-2 mt-4">
-                      <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-100 dark:bg-slate-800/50">
-                        <Users className="h-4 w-4 text-blue-600 mb-1" />
-                        <span className="text-[10px] uppercase font-semibold text-muted-foreground tracking-wider">Followers</span>
-                        <span className="text-sm font-bold text-slate-800 dark:text-slate-200">{client.followers || "—"}</span>
-                      </div>
-                      <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-100 dark:bg-slate-800/50">
-                        <Eye className="h-4 w-4 text-green-600 mb-1" />
-                        <span className="text-[10px] uppercase font-semibold text-muted-foreground tracking-wider">Reach</span>
-                        <span className="text-sm font-bold text-slate-800 dark:text-slate-200">{client.reach || "—"}</span>
-                      </div>
-                      <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-100 dark:bg-slate-800/50">
-                        <TrendingUp className="h-4 w-4 text-purple-600 mb-1" />
-                        <span className="text-[10px] uppercase font-semibold text-muted-foreground tracking-wider">Engage</span>
-                        <span className="text-sm font-bold text-slate-800 dark:text-slate-200">{client.engagement || "—"}</span>
-                      </div>
-                    </div>
-
-                    {/* Action Button */}
+                  {/* 3. Footer: Simple Visit Button */}
+                  <div className="pt-2 border-t border-slate-100 mt-auto">
                     <Button 
-                      className="w-full gap-2 font-medium" 
-                      variant="outline"
+                      className="w-full gap-2 font-medium bg-black text-white hover:bg-slate-800" 
+                      variant="default"
                       asChild
                     >
                       <a
