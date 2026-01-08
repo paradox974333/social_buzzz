@@ -43,7 +43,7 @@ const members = [
     },
     {
         name: 'MANJUNATH NAGANAHALLI',
-        role: 'Camera man',
+        role: 'Shoot expert',
         avatar: '/IMG_0207.JPG',
         link: '#',
     },
