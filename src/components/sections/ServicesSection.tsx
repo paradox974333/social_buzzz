@@ -22,7 +22,7 @@ const services: Service[] = [
   {
     title: 'Complete Account Management',
     description: 'Full-service social media management for your brand',
-    price: '₹6,000/month',
+    price: 'Custom Pricing',
     features: [
       '6 high-quality reels with professional voice-over',
       'Festival posters for every occasion',
@@ -35,7 +35,7 @@ const services: Service[] = [
   {
     title: 'Clothing Brand Management',
     description: 'Specialized content creation for fashion brands',
-    price: '₹500/video',
+    price: 'Custom Pricing',
     features: [
       'Self shoot reel',
       'Professional video editing',
@@ -49,7 +49,7 @@ const services: Service[] = [
   {
     title: 'Full Production Service',
     description: 'Complete content creation with our team',
-    price: '₹2,000/video',
+    price: 'Custom Pricing',
     features: [
       'Professional cameraman',
       'On-camera talent provided',
