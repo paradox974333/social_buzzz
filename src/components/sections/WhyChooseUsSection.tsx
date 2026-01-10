@@ -51,7 +51,7 @@ const WhyChooseUsSection = () => {
             className="text-4xl md:text-6xl font-black tracking-tighter text-black mb-8 leading-[1.1]"
           >
             Why Brands Choose <br />
-            <span className="bg-black text-white px-3 py-1 inline-block transform -rotate-1 italic">Social_Buzzz.</span>
+            <span className="bg-black text-white px-3 py-1 inline-block transform -rotate-1 italic">Social_Buzzz18.</span>
           </motion.h2>
           
           <motion.p 

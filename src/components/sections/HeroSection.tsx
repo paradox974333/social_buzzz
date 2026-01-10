@@ -167,7 +167,7 @@ const HeroSection = () => {
             className="mb-6"
           >
             <span className="px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary font-bold tracking-widest uppercase text-sm md:text-base shadow-sm backdrop-blur-sm">
-              Social_Buzzz
+              Social_Buzzz18
             </span>
           </motion.div>
 
