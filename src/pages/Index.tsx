@@ -6,6 +6,7 @@ import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import TeamSection from "@/components/sections/TeamSection"; // <--- Import here
 import FooterSection from "@/components/sections/FooterSection";
 import FloatingContactButton from "@/components/FloatingContactButton";
+import CarouselSection from "@/components/sections/CarouselSection";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <div className="relative z-20 bg-background">
         <ServicesSection />
         <ClientsSection />
+        <CarouselSection /> 
         <AchievementsSection />
         <WhyChooseUsSection />
         <TeamSection />  {/* <--- Added here */}
