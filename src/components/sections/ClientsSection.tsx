@@ -64,6 +64,14 @@ const clients: Client[] = [
       "https://www.instagram.com/aaradhya_collection70?igsh=ZG5zc3ptb2g2MWsy",
       "https://www.instagram.com/reel/DSZUJ3KEaPV/"
     ]
+  },
+  {
+    handle: "@medini_fashions_suma",
+    igHandleForUrl: "medini_fashions_suma",
+    posts: [
+      "https://www.instagram.com/medini_fashions_suma?igsh=cDRib2xtczE5c2Ju&utm_source=qr",
+      "https://www.instagram.com/reel/DSpoLbDEpan/?igsh=OTI5bDc1emY0ZXpj"
+    ]
   }
 ];
 
