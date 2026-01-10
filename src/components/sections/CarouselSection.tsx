@@ -128,7 +128,7 @@ const CarouselSection = () => {
                </div>
              ))}
           </div>
-          <span className="text-[10px] md:text-xs font-bold text-foreground uppercase tracking-tighter">50+ Brands Scaled</span>
+          <span className="text-[10px] md:text-xs font-bold text-foreground uppercase tracking-tighter">10+ Brands Scaled</span>
         </div>
       </motion.div>
     </section>
