@@ -72,6 +72,14 @@ const clients: Client[] = [
       "https://www.instagram.com/medini_fashions_suma?igsh=cDRib2xtczE5c2Ju&utm_source=qr",
       "https://www.instagram.com/reel/DSpoLbDEpan/?igsh=OTI5bDc1emY0ZXpj"
     ]
+  },
+  {
+    handle: "@advika_fashion9",
+    igHandleForUrl: "advika_fashion9",
+    posts: [
+      "https://www.instagram.com/advika_fashion9?igsh=MXN5YmNnaHo3YXJrNA==",
+      "https://www.instagram.com/reel/DSWigYVE_-2/?igsh=NDFhcHBqbm1zZ2tm"
+    ]
   }
 ];
 
