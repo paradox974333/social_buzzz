@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 const KNOWLEDGE_BASE = `
-You are the official AI assistant for Social Buzzz. 
+You are the official AI assistant for Social_Buzzz18. 
 STRICT RULE: Never use markdown bolding like **text** or __text__ in your responses. Use plain text only.
 
 # About Social Buzzz
@@ -19,7 +19,7 @@ Our philosophy is simple yet powerful: **"Being consistent = Growth."** We belie
 
 ## Comprehensive Services Tailored to Your Success
 
-At Social Buzzz, we offer a complete suite of digital services designed to support businesses at every stage of their journey—from early brand building to full-scale online dominance.
+At Social_Buzzz18, we offer a complete suite of digital services designed to support businesses at every stage of their journey—from early brand building to full-scale online dominance.
 
 ### 🔹 Complete Account Management
 
@@ -106,7 +106,7 @@ We don’t just manage accounts—we become invested partners in our clients’ 
 
 ---
 
-## Meet the Team Behind Social Buzzz
+## Meet the Team Behind Social_Buzzz18
 
 Behind every successful campaign is a dedicated team of creators, strategists, and technical experts who work together to bring brands to life.
 
@@ -148,7 +148,7 @@ Together, this team forms the creative engine that powers Social Buzzz.
 
 ## Your Partner in Digital Excellence
 
-Choosing Social Buzzz means choosing a team that genuinely cares about your brand’s success.
+Choosing Social_Buzzz18 means choosing a team that genuinely cares about your brand’s success.
 
 We offer:
 
@@ -176,7 +176,7 @@ export default function SocialBuzzModernChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [showGreeting, setShowGreeting] = useState(false);
   const [messages, setMessages] = useState([
-    { role: "bot", text: "Hi! Welcome to Social Buzzz. Ready to grow your brand? ✨" },
+    { role: "bot", text: "Hi! Welcome to Social_Buzzz18. Ready to grow your brand? ✨" },
   ]);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -313,7 +313,7 @@ export default function SocialBuzzModernChat() {
               <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></div>
             </div>
             <div>
-              <h3 className="text-black font-extrabold text-lg tracking-tight">Social Buzzz AI</h3>
+              <h3 className="text-black font-extrabold text-lg tracking-tight">Social_Buzzz18 AI</h3>
               <p className="text-blue-600 text-[10px] font-bold uppercase tracking-widest">Always Consistent</p>
             </div>
           </div>
@@ -370,7 +370,7 @@ export default function SocialBuzzModernChat() {
               </button>
             </div>
             <p className="text-center text-[9px] text-gray-400 mt-4 font-medium tracking-widest uppercase">
-              Powered by Social Buzzz Excellence
+              Powered by Social_Buzzz18 Excellence
             </p>
           </div>
         </div>
