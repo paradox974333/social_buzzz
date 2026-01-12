@@ -7,7 +7,7 @@ import TeamSection from "@/components/sections/TeamSection"; // <--- Import here
 import FooterSection from "@/components/sections/FooterSection";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import CarouselSection from "@/components/sections/CarouselSection";
-import BotPenguin from "@/components/BotPenguin";
+import GeminiChatBot from "@/components/GeminiChatBot";
 
 const Index = () => {
   return (
@@ -24,7 +24,7 @@ const Index = () => {
         <TeamSection />  {/* <--- Added here */}
         <FooterSection />
       </div>
-      <BotPenguin />
+      <GeminiChatBot />
       <FloatingContactButton />
     </div>
   );
