@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 // NOTE: Replace with your actual API key
-const GEMINI_API_KEY = "AIzaSyCHC9dGJRtM5Xep5ifdxAr-9IaE1AbbFDk";
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 const KNOWLEDGE_BASE = `
 You are the official AI assistant for Social Buzzz. 
