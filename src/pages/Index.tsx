@@ -7,6 +7,7 @@ import TeamSection from "@/components/sections/TeamSection"; // <--- Import here
 import FooterSection from "@/components/sections/FooterSection";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import CarouselSection from "@/components/sections/CarouselSection";
+import BotPenguin from "@/components/BotPenguin";
 
 const Index = () => {
   return (
@@ -23,7 +24,7 @@ const Index = () => {
         <TeamSection />  {/* <--- Added here */}
         <FooterSection />
       </div>
-      <script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>6964d5ea4e348154ec6a8bfa,6964d5d5cd387dee09f92915</script>
+      <BotPenguin />
       <FloatingContactButton />
     </div>
   );
