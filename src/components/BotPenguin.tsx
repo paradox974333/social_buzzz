@@ -6,7 +6,7 @@ const BotPenguin = () => {
     script.id = "messenger-widget-b";
     script.src = "https://cdn.botpenguin.com/website-bot.js";
     script.defer = true;
-    script.innerHTML = "6964d5ea4e348154ec6a8bfa,6964d5d5cd387dee09f92915";
+    script.innerHTML = "6964dbce4e348154ec6a8ddf,6964d5d5cd387dee09f92915";
 
     document.body.appendChild(script);
 
