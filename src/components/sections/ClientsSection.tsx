@@ -80,6 +80,14 @@ const clients: Client[] = [
       "https://www.instagram.com/advika_fashion9?igsh=MXN5YmNnaHo3YXJrNA==",
       "https://www.instagram.com/reel/DSWigYVE_-2/?igsh=NDFhcHBqbm1zZ2tm"
     ]
+  },
+  {
+    handle: "@vidya_ilkal_silk_sarees",
+    igHandleForUrl: "vidya_ilkal_silk_sarees",
+    posts: [
+      "https://www.instagram.com/vidya_ilkal_silk_sarees?igsh=MTRpZzl0ejAwZTRhcg==",
+      "https://www.instagram.com/reel/DU2_4opCjdX/?igsh=OXg2emVuYXpyZzk5"
+    ]
   }
 ];
 
