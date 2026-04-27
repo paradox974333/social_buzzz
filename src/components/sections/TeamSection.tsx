@@ -42,16 +42,22 @@ const members = [
         link: '#',
     },
     {
-        name: 'VADIRAJ HABBU',
-        role: 'Editor',
-        avatar: '/IMG_0206 (1).PNG',
+        name: 'RATANRAJ',
+        role: 'Cameraman',
+        avatar: '/WhatsApp Image 2026-04-28 at 12.37.34 AM.jpeg',
         link: '#',
     },
-    
+
     {
         name: 'PRAJVALSINGH THAKUR',
         role: 'Voice over artist',
         avatar: '/IMG_0211.JPG',
+        link: '#',
+    },
+    {
+        name: 'SHREYASH',
+        role: 'Poster designer',
+        avatar: '/WhatsApp Image 2026-04-28 at 12.38.35 AM.jpeg',
         link: '#',
     },
 ];
