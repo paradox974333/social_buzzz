@@ -60,6 +60,12 @@ const members = [
         avatar: '/WhatsApp Image 2026-04-28 at 12.38.35 AM.jpeg',
         link: '#',
     },
+    {
+        name: 'NISHA',
+        role: 'Marketing expert',
+        avatar: '/WhatsApp Image 2026-04-28 at 12.41.30 AM.jpeg',
+        link: '#',
+    },
 ];
 
 /* -------------------------------
