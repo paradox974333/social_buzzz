@@ -19,6 +19,14 @@ interface Client {
 ---------------------------------*/
 const clients: Client[] = [
   {
+    handle: "@shlokaabirlaschoolklb",
+    igHandleForUrl: "shlokaabirlaschoolklb",
+    posts: [
+      "https://www.instagram.com/shlokaabirlaschoolklb?igsh=Y2Zra25qMWwwY3hs",
+      "https://www.instagram.com/reel/DXpQkMoDuds/?igsh=NGsxZjdlZXFweTN2"
+    ]
+  },
+  {
     handle: "@shanta_kadlis_collection",
     igHandleForUrl: "shanta_kadlis_collection",
     posts: [
