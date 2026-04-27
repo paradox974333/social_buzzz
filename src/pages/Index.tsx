@@ -7,6 +7,7 @@ import TeamSection from "@/components/sections/TeamSection"; // <--- Import here
 import FooterSection from "@/components/sections/FooterSection";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import CarouselSection from "@/components/sections/CarouselSection";
+import CertificationSection from "@/components/sections/CertificationSection";
 import GeminiChatBot from "@/components/GeminiChatBot";
 
 const Index = () => {
@@ -18,7 +19,8 @@ const Index = () => {
       <div className="relative z-20 bg-background">
         <ServicesSection />
         <ClientsSection />
-        <CarouselSection /> 
+        <CarouselSection />
+        <CertificationSection />
         <AchievementsSection />
         <WhyChooseUsSection />
         <TeamSection />  {/* <--- Added here */}
