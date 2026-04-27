@@ -7,7 +7,7 @@ const FooterSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">social<span className="text-primary">_buzzz</span></h3>
+            <h3 className="text-2xl font-bold mb-4">social<span className="text-primary">_buzzz18</span></h3>
             <p className="text-muted-foreground mb-4">
               Elevating brands through creative social media management and modern web solutions.
             </p>
