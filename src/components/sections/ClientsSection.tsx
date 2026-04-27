@@ -88,6 +88,14 @@ const clients: Client[] = [
       "https://www.instagram.com/vidya_ilkal_silk_sarees?igsh=MTRpZzl0ejAwZTRhcg==",
       "https://www.instagram.com/reel/DU2_4opCjdX/?igsh=OXg2emVuYXpyZzk5"
     ]
+  },
+  {
+    handle: "@life_style_premium_store",
+    igHandleForUrl: "life_style_premium_store",
+    posts: [
+      "https://www.instagram.com/life_style_premium_store?igsh=MWxidW4ycnE4N3hnZw==",
+      "https://www.instagram.com/reel/DWk3FZ2CMDO/?igsh=MW8wYWFqeWdiOThs"
+    ]
   }
 ];
 
