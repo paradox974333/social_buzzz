@@ -27,6 +27,14 @@ const clients: Client[] = [
     ]
   },
   {
+    handle: "@bominds_mahaveernagar",
+    igHandleForUrl: "bominds_mahaveernagar",
+    posts: [
+      "https://www.instagram.com/bominds_mahaveernagar?igsh=d2xxdTgyNXdjM2Zh",
+      "https://www.instagram.com/reel/DXoXBEdjdyP/?igsh=ejNtNDl0cndhcHdz"
+    ]
+  },
+  {
     handle: "@shanta_kadlis_collection",
     igHandleForUrl: "shanta_kadlis_collection",
     posts: [
