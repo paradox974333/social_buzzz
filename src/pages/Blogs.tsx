@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight, ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,6 +9,15 @@ import { blogPosts } from "@/data/blogs";
 const Blogs = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Blogs — Social Buzzz | Social Media Marketing Tips &amp; Strategies</title>
+        <meta name="description" content="Insights, tips, and strategies to help your brand grow on social media. Instagram growth, video marketing, Google Ads, Meta Ads, influencer marketing and more." />
+        <meta property="og:title" content="Blogs — Social Buzzz | Social Media Marketing Tips &amp; Strategies" />
+        <meta property="og:description" content="Insights, tips, and strategies to help your brand grow on social media." />
+        <meta property="og:url" content="https://socialbuzzz18.in/blogs" />
+        <meta name="twitter:title" content="Blogs — Social Buzzz | Social Media Marketing Tips &amp; Strategies" />
+        <meta name="twitter:description" content="Insights, tips, and strategies to help your brand grow on social media." />
+      </Helmet>
       <Navbar />
 
       {/* Header */}

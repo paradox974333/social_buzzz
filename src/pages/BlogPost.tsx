@@ -1,14 +1,40 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Calendar, Clock, ChevronLeft, ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/sections/FooterSection";
 import { blogPosts } from "@/data/blogs";
 
+const siteUrl = "https://socialbuzzz18.in";
+
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const post = blogPosts.find((p) => p.id === Number(id));
+
+  const articleSchema = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        description: post.excerpt,
+        image: `${siteUrl}${post.image}`,
+        datePublished: post.date,
+        author: {
+          "@type": "Organization",
+          name: "Social Buzzz",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Social Buzzz",
+          logo: {
+            "@type": "ImageObject",
+            url: `${siteUrl}/IMG_0210.JPG`,
+          },
+        },
+      }
+    : null;
 
   if (!post) {
     return (
@@ -35,6 +61,20 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{post.title} — Social Buzzz Blog</title>
+        <meta name="description" content={post.excerpt} />
+        <meta property="og:title" content={`${post.title} — Social Buzzz Blog`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={`${siteUrl}/blogs/${post.id}`} />
+        <meta property="og:image" content={`${siteUrl}${post.image}`} />
+        <meta name="twitter:title" content={`${post.title} — Social Buzzz Blog`} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content={`${siteUrl}${post.image}`} />
+        {articleSchema && (
+          <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        )}
+      </Helmet>
       <Navbar />
 
       <article>
