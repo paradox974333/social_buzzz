@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button"; // Assuming you have this, otherwise use standard <button>
-import { Users, TrendingUp, Play, Code, CheckCircle, Phone, X } from "lucide-react";
+import { Users, TrendingUp, Play, Code, CheckCircle, Phone, X, Package, Share2, Globe, Search, Target, Heart, Truck, Star } from "lucide-react";
 import type { ReactNode } from "react";
 
 // --- Types ---
@@ -20,13 +20,15 @@ interface Service {
 // --- Data ---
 const services: Service[] = [
   {
-    title: 'Complete Account Management',
+    title: 'Complete social Media Management',
     description: 'Full-service social media management for your brand',
     price: 'Custom Pricing',
     features: [
+      'Everyday posting',
+      'Regular brand-related posts and creatives',
       '6 high-quality reels with professional voice-over',
       'Festival posters for every occasion',
-      'Regular brand-related posts',
+      
       'Consistent visibility and engagement',
       'Strong brand presence building'
     ],
@@ -47,7 +49,7 @@ const services: Service[] = [
     icon: <TrendingUp className="h-8 w-8" />
   },
   {
-    title: 'Full Production Service',
+    title: 'Full Production Service (clothing brand)',
     description: 'Complete content creation with our team',
     price: 'Custom Pricing',
     features: [
@@ -72,6 +74,76 @@ const services: Service[] = [
       'Pricing varies by requirements'
     ],
     icon: <Code className="h-8 w-8" />
+  },
+  {
+    title: 'Google Ads',
+    description: 'High-converting Google advertising campaigns',
+    price: 'Custom Pricing',
+    features: [
+      'Keyword research & strategy',
+      'Search & display campaigns',
+      'Performance monitoring',
+      'A/B testing of creatives',
+      'Budget optimization',
+      'ROI tracking & reporting'
+    ],
+    icon: <Search className="h-8 w-8" />
+  },
+  {
+    title: 'Meta Ads',
+    description: 'Targeted Facebook & Instagram ad campaigns',
+    price: 'Custom Pricing',
+    features: [
+      'Audience targeting & retargeting',
+      'Engaging ad creatives',
+      'Instagram & Facebook placements',
+      'Conversion tracking setup',
+      'Campaign optimization',
+      'Detailed performance insights'
+    ],
+    icon: <Target className="h-8 w-8" />
+  },
+  {
+    title: 'Wedding Event - Social Media Handling',
+    description: 'Live coverage and social media management for weddings',
+    price: 'Custom Pricing',
+    features: [
+      'Instant reel uploads during events',
+      'Real-time story updates',
+      'Professional photo & video capture',
+      'Instant reel creation and fast delivery',
+      'Highlight reel creation',
+      'Real-time cinematic reel creation',
+    ],
+    icon: <Heart className="h-8 w-8" />
+  },
+  {
+    title: 'Car Delivery Shoot & Editing',
+    description: 'Professional automotive content production',
+    price: 'Custom Pricing',
+    features: [
+      'Showroom & delivery shoot',
+      'Professional video editing',
+      'Interior & exterior coverage',
+      'Cinematic color grading',
+      'Music & sound design',
+      'Quick turnaround delivery'
+    ],
+    icon: <Truck className="h-8 w-8" />
+  },
+  {
+    title: 'Influencer Marketing',
+    description: 'Strategic influencer partnerships and campaigns',
+    price: 'Custom Pricing',
+    features: [
+      'Influencer identification',
+      'Campaign strategy & planning',
+      'Content brief creation',
+      'Performance tracking',
+      'ROI measurement',
+      'Relationship management'
+    ],
+    icon: <Star className="h-8 w-8" />
   }
 ];
 

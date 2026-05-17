@@ -3,7 +3,7 @@ import { Instagram, Phone, MessageCircle } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer className="bg-muted py-12">
+    <footer id="contact" className="bg-muted py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -36,11 +36,15 @@ const FooterSection = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Account Management</li>
-              <li>Content Creation</li>
-              <li>Video Production</li>
-              <li>Website Development</li>
-              <li>SEO Optimization</li>
+              <li>Complete Social Media Management</li>
+              <li>Clothing Brand Management</li>
+              <li>Full Production Service</li>
+              <li>Website Development & SEO</li>
+              <li>Google Ads</li>
+              <li>Meta Ads</li>
+              <li>Wedding Event Management</li>
+              <li>Car Delivery Shoot & Editing</li>
+              <li>Influencer Marketing</li>
             </ul>
           </div>
           

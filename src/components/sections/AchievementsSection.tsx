@@ -30,7 +30,7 @@ const stats = [
 
 const AchievementsSection = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section id="achievements" className="py-24 bg-background relative overflow-hidden">
       {/* Refined Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/5 blur-[140px] rounded-full pointer-events-none" />
 

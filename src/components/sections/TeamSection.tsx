@@ -12,21 +12,15 @@ const members = [
         link: '#',
     },
     {
-        name: 'PRADHUDEV SAJJAN',
-        role: 'Co-Founder',
-        avatar: '/IMG_8249.JPG',
+        name: 'NISHA',
+        role: 'Co-founder & Marketing Expert',
+        avatar: '/WhatsApp Image 2026-04-28 at 12.41.30 AM.jpeg',
         link: '#',
     },
     {
         name: 'MANOJ L',
         role: 'Web developer',
         avatar: '/WhatsApp Image 2026-01-08 at 3.39.08 PM.jpeg',
-        link: '#',
-    },
-    {
-        name: 'SHIVANI DURG',
-        role: 'Product artist',
-        avatar: '/IMG_0205.PNG',
         link: '#',
     },
     {
@@ -60,12 +54,6 @@ const members = [
         avatar: '/WhatsApp Image 2026-04-28 at 12.38.35 AM.jpeg',
         link: '#',
     },
-    {
-        name: 'NISHA',
-        role: 'Marketing expert',
-        avatar: '/WhatsApp Image 2026-04-28 at 12.41.30 AM.jpeg',
-        link: '#',
-    },
 ];
 
 /* -------------------------------
@@ -73,7 +61,7 @@ const members = [
 ---------------------------------*/
 const TeamSection = () => {
     return (
-        <section className="py-16 md:py-32 bg-background">
+        <section id="team" className="py-16 md:py-32 bg-background">
             <div className="container mx-auto px-6 border-t border-border/40 pt-16">
                 
                 {/* Section Tag */}

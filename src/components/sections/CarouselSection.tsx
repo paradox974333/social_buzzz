@@ -12,21 +12,21 @@ const trustedBrands = [
   { name: "Brand Five", logo: "/WhatsApp Image 2026-01-10 at 5.37.02 PM (1).jpeg" },
   { name: "Brand Six", logo: "/WhatsApp Image 2026-01-10 at 5.37.02 PM (2).jpeg" },
   { name: "Brand Seven", logo: "/WhatsApp Image 2026-01-10 at 5.37.02 PM (3).jpeg" },
+  { name: "Brand Eight", logo: "/WhatsApp Image 2026-05-17 at 11.24.21 PM.jpeg" },
+  { name: "Brand Nine", logo: "/WhatsApp Image 2026-05-17 at 11.24.45 PM.jpeg" },
+  { name: "Brand Ten", logo: "/WhatsApp Image 2026-05-17 at 11.27.22 PM.jpeg" },
+  { name: "Brand Eleven", logo: "/WhatsApp Image 2026-05-17 at 11.29.00 PM (1).jpeg" },
 ]
 
 const LogoCard = ({ brand }: { brand: typeof trustedBrands[0] }) => (
-  <div className="relative shrink-0 w-36 md:w-56 h-24 md:h-32 flex items-center justify-center group mx-3 md:mx-8">
+  <div className="relative shrink-0 w-44 md:w-72 h-32 md:h-44 flex items-center justify-center group mx-4 md:mx-8">
     {/* Glass Background Effect */}
     <div className="absolute inset-0 bg-card/40 backdrop-blur-sm border border-white/5 rounded-2xl transition-all duration-300 md:group-hover:bg-card/80 md:group-hover:border-primary/30 md:group-hover:shadow-[0_0_30px_-10px_rgba(var(--primary),0.3)]" />
     
-    {/* Logo Image Logic: 
-        - Mobile: grayscale-0 (Full Color), opacity-100
-        - Desktop (md): grayscale (B&W), opacity-50, turns to color on group-hover
-    */}
     <img 
       src={brand.logo} 
       alt={brand.name} 
-      className="relative z-10 max-w-[70%] max-h-[50%] object-contain transition-all duration-500 
+      className="relative z-10 max-w-[90%] max-h-[85%] object-contain transition-all duration-500 
                  grayscale-0 opacity-100 
                  md:grayscale md:opacity-50 md:contrast-125 
                  md:group-hover:grayscale-0 md:group-hover:opacity-100 md:group-hover:scale-110"
@@ -39,7 +39,7 @@ const CarouselSection = () => {
   const duplicatedBrands = [...trustedBrands, ...trustedBrands, ...trustedBrands]
 
   return (
-    <section className="py-20 bg-background overflow-hidden relative">
+    <section id="clients" className="py-20 bg-background overflow-hidden relative">
       {/* Background Glows for Brand Consistency */}
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/10 blur-[100px] rounded-full -z-10" />
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary/5 blur-[100px] rounded-full -z-10" />
@@ -63,7 +63,7 @@ const CarouselSection = () => {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-black tracking-tight text-foreground"
           >
-            Our <span className="text-primary italic text-shadow-glow">Trusted</span> Brands
+            Our <span className="text-primary italic text-shadow-glow">Trusted</span> Clients
           </motion.h2>
           
           <motion.p 
@@ -78,7 +78,7 @@ const CarouselSection = () => {
         </div>
       </div>
 
-      {/* Infinite Marquee Container */}
+      {/* Slow Infinite Marquee */}
       <div className="relative flex items-center group/marquee">
         {/* Left/Right Fades to hide edges */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-48 bg-gradient-to-r from-background via-background/80 to-transparent z-20" />
@@ -93,7 +93,7 @@ const CarouselSection = () => {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 25, 
+              duration: 60,
               ease: "linear",
             },
           }}
