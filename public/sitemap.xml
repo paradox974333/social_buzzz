@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
   <url>
     <loc>https://socialbuzzz18.in/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Blog Index -->
   <url>
     <loc>https://socialbuzzz18.in/blogs</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Existing Blog Posts -->
   <url>
     <loc>https://socialbuzzz18.in/blogs/1</loc>
     <changefreq>monthly</changefreq>
@@ -40,4 +45,58 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Complete Social Media Management Blogs (ID 7-10) -->
+  <url><loc>https://socialbuzzz18.in/blogs/7</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/8</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/9</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/10</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Clothing Brand Management Blogs (ID 11-14) -->
+  <url><loc>https://socialbuzzz18.in/blogs/11</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/12</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/13</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/14</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Full Production Service Blogs (ID 15-18) -->
+  <url><loc>https://socialbuzzz18.in/blogs/15</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/16</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/17</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/18</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Website Development & SEO Blogs (ID 19-22) -->
+  <url><loc>https://socialbuzzz18.in/blogs/19</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/20</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/21</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/22</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Google Ads Blogs (ID 23-26) -->
+  <url><loc>https://socialbuzzz18.in/blogs/23</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/24</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/25</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/26</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Meta Ads Blogs (ID 27-30) -->
+  <url><loc>https://socialbuzzz18.in/blogs/27</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/28</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/29</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/30</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Wedding Event Social Media Blogs (ID 31-34) -->
+  <url><loc>https://socialbuzzz18.in/blogs/31</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/32</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/33</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/34</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Car Delivery Shoot & Editing Blogs (ID 35-38) -->
+  <url><loc>https://socialbuzzz18.in/blogs/35</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/36</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/37</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/38</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Influencer Marketing Blogs (ID 39-42) -->
+  <url><loc>https://socialbuzzz18.in/blogs/39</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/40</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/41</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://socialbuzzz18.in/blogs/42</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

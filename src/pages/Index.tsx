@@ -32,13 +32,30 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       <Helmet>
-        <title>Social Buzzz — Social Media Marketing &amp; Growth Agency</title>
-        <meta name="description" content="Professional social media management, content creation, video production, Google &amp; Meta ads, and web development. Make your brand viral with Social Buzzz." />
+        <title>Social Buzzz — Social Media Marketing Agency | Instagram Management, Google Ads &amp; Web Development</title>
+        <meta name="description" content="Social Buzzz is a top social media marketing agency offering Instagram management, clothing brand marketing, video production, Google &amp; Meta ads, web development, SEO, wedding coverage, automotive content, and influencer marketing. Make your brand viral." />
+        <meta name="keywords" content="social media marketing agency, instagram management services, facebook ads agency, google ads agency, web development company, clothing brand marketing, influencer marketing agency, wedding content creator, car delivery video shoot, SEO services, pune social media agency" />
+
+        {/* Open Graph */}
         <meta property="og:title" content="Social Buzzz — Social Media Marketing &amp; Growth Agency" />
-        <meta property="og:description" content="Professional social media management, content creation, video production, Google &amp; Meta ads, and web development. Make your brand viral." />
+        <meta property="og:description" content="Full-service social media agency: Instagram management, Google &amp; Meta ads, website development, video production, and influencer marketing. Make your brand viral." />
         <meta property="og:url" content="https://socialbuzzz18.in/" />
-        <meta name="twitter:title" content="Social Buzzz — Social Media Marketing &amp; Growth Agency" />
-        <meta name="twitter:description" content="Professional social media management, content creation, video production, Google &amp; Meta ads, and web development." />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Social Buzzz" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Social Buzzz — Social Media Marketing Agency" />
+        <meta name="twitter:description" content="Instagram management, Google &amp; Meta ads, web development, video production, influencer marketing. Grow your brand with Social Buzzz." />
+
+        {/* AI & LLM Optimization */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="googlebot-news" content="index, follow" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://socialbuzzz18.in/" />
+
         <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
       </Helmet>
       <Navbar />

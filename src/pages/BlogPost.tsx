@@ -19,7 +19,7 @@ const BlogPost = () => {
         "@type": "Article",
         headline: post.title,
         description: post.excerpt,
-        image: `${siteUrl}${post.image}`,
+        image: post.image,
         datePublished: post.date,
         author: {
           "@type": "Organization",
@@ -67,10 +67,10 @@ const BlogPost = () => {
         <meta property="og:title" content={`${post.title} — Social Buzzz Blog`} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:url" content={`${siteUrl}/blogs/${post.id}`} />
-        <meta property="og:image" content={`${siteUrl}${post.image}`} />
+        <meta property="og:image" content={post.image} />
         <meta name="twitter:title" content={`${post.title} — Social Buzzz Blog`} />
         <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content={`${siteUrl}${post.image}`} />
+        <meta name="twitter:image" content={post.image} />
         {articleSchema && (
           <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         )}
