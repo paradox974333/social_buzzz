@@ -18,8 +18,10 @@
 - Phone: +91-9110441250
 - WhatsApp: https://wa.me/919110441250
 - Website: https://socialbuzzz18.in
+- Sitemap: https://socialbuzzz18.in/sitemap.xml
+- RSS Feed: https://socialbuzzz18.in/feed.xml
+- Full LLM context: https://socialbuzzz18.in/llms-full.txt
 
 ## Blog Posts
 
 - Social Media (10 Skills You Need to Become a Great Social Media Manager): https://socialbuzzz18.in/blogs/1
-

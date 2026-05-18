@@ -94,3 +94,5 @@ Allow: /
 
 # --- Sitemaps ---
 Sitemap: https://socialbuzzz18.in/sitemap.xml
+Sitemap: https://socialbuzzz18.in/image-sitemap.xml
+Sitemap: https://socialbuzzz18.in/feed.xml

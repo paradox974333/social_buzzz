@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Social Buzzz Blog</title>
+    <link>https://socialbuzzz18.in/blogs</link>
+    <description>Social media marketing, digital marketing, content creation, ads, video production, and local growth insights from Social Buzzz.</description>
+    <language>en-IN</language>
+    <lastBuildDate>Mon, 18 May 2026 00:00:00 +0530</lastBuildDate>
+    <atom:link href="https://socialbuzzz18.in/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>10 Skills You Need to Become a Great Social Media Manager</title>
+      <link>https://socialbuzzz18.in/blogs/1</link>
+      <guid isPermaLink="true">https://socialbuzzz18.in/blogs/1</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0530</pubDate>
+      <category>Social Media</category>
+      <description>Learn the 10 essential skills every Social Media Manager needs, from content creation and reels to analytics, ads, and local audience psychology in Kalaburagi.</description>
+    </item>
+  </channel>
+</rss>

@@ -19,11 +19,14 @@ export interface BlogPost {
   excerpt: string;
   date: string;
   publishedAt?: string;
+  updatedAt?: string;
   readTime: string;
   category: string;
   tags?: string[];
   image: string;
   imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   content: BlogContentBlock[];
   metaTitle?: string;
   metaDescription?: string;
@@ -37,6 +40,7 @@ export const blogPosts: BlogPost[] = [
       "Learn the 10 essential skills every Social Media Manager needs, from content creation and reels to analytics, ads, and local audience psychology in Kalaburagi.",
     date: "May 18, 2026",
     publishedAt: "2026-05-18",
+    updatedAt: "2026-05-18",
     readTime: "12 min read",
     category: "Social Media",
     tags: [
@@ -47,9 +51,11 @@ export const blogPosts: BlogPost[] = [
       "Content Creation",
     ],
     image:
-      "https://images.unsplash.com/photo-1759215524649-78b47fc790e0?q=85&w=2400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1724754610099-b11b5a9efcd5?q=85&w=2400&auto=format&fit=crop",
     imageAlt:
-      "Woman using a laptop with social media open for digital marketing and social media management",
+      "Person recording a laptop screen with a phone during social media content creation",
+    imageWidth: 2400,
+    imageHeight: 1464,
     metaTitle: "Best Digital Marketing in Kalaburagi | Social Media Marketing",
     metaDescription:
       "Looking for the best digital marketing in Kalaburagi? Grow your business with expert social media marketing, creative branding, video making in Kalaburagi, reels, ads, and content strategies designed for the Kalaburagi audience.",

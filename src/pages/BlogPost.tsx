@@ -25,6 +25,20 @@ const slugify = (value: string) =>
 const getHeadingId = (text: string, idx: number) =>
   `section-${idx}-${slugify(text)}`;
 
+const getArticleText = (content: BlogContentBlock[]) =>
+  content
+    .flatMap((block) => {
+      if (block.type === "list") {
+        return block.items;
+      }
+
+      return block.text;
+    })
+    .join(" ");
+
+const getWordCount = (text: string) =>
+  text.trim().split(/\s+/).filter(Boolean).length;
+
 const renderContentBlock = (block: BlogContentBlock, idx: number) => {
   if (block.type === "heading") {
     if (block.level === 3) {
@@ -84,34 +98,13 @@ const BlogPost = () => {
   const navigate = useNavigate();
   const post = blogPosts.find((p) => p.id === Number(id));
 
-  const articleSchema = post
-    ? {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: post.title,
-        description: post.metaDescription ?? post.excerpt,
-        image: post.image,
-        datePublished: post.publishedAt,
-        articleSection: post.category,
-        keywords: post.tags?.join(", "),
-        author: {
-          "@type": "Organization",
-          name: "Social Buzzz",
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "Social Buzzz",
-          logo: {
-            "@type": "ImageObject",
-            url: `${siteUrl}/IMG_0210.JPG`,
-          },
-        },
-      }
-    : null;
-
   if (!post) {
     return (
       <div className="min-h-screen bg-background flex flex-col">
+        <Helmet>
+          <title>Blog Not Found | Social Buzzz</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <Navbar />
         <div className="flex-1 flex items-center justify-center px-4">
           <div className="text-center">
@@ -132,6 +125,88 @@ const BlogPost = () => {
     );
   }
 
+  const articleUrl = `${siteUrl}/blogs/${post.id}`;
+  const articleText = getArticleText(post.content);
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${articleUrl}#blog-posting`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+    url: articleUrl,
+    headline: post.title,
+    name: post.title,
+    description: post.metaDescription ?? post.excerpt,
+    articleBody: articleText,
+    articleSection: post.category,
+    keywords: post.tags ?? [],
+    wordCount: getWordCount(articleText),
+    inLanguage: "en-IN",
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt ?? post.publishedAt,
+    image: {
+      "@type": "ImageObject",
+      url: post.image,
+      width: post.imageWidth,
+      height: post.imageHeight,
+      caption: post.imageAlt ?? post.title,
+    },
+    author: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Social Buzzz",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Social Buzzz",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/IMG_0210.JPG`,
+      },
+    },
+    isPartOf: {
+      "@type": "Blog",
+      "@id": `${siteUrl}/blogs#blog`,
+      name: "Social Buzzz Blog",
+      url: `${siteUrl}/blogs`,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@id": siteUrl,
+          name: "Home",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@id": `${siteUrl}/blogs`,
+          name: "Blogs",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@id": articleUrl,
+          name: post.title,
+        },
+      },
+    ],
+  };
+
   const headingLinks = post.content.flatMap((block, index) =>
     block.type === "heading"
       ? [
@@ -148,12 +223,34 @@ const BlogPost = () => {
       <Helmet>
         <title>{post.metaTitle ?? post.title}</title>
         <meta name="description" content={post.metaDescription ?? post.excerpt} />
+        <meta name="author" content="Social Buzzz" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <link rel="canonical" href={articleUrl} />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Social Buzzz Blog RSS Feed"
+          href={`${siteUrl}/feed.xml`}
+        />
         <meta property="og:title" content={post.metaTitle ?? post.title} />
         <meta property="og:description" content={post.metaDescription ?? post.excerpt} />
-        <meta property="og:url" content={`${siteUrl}/blogs/${post.id}`} />
+        <meta property="og:url" content={articleUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Social Buzzz" />
         <meta property="og:image" content={post.image} />
+        <meta property="og:image:alt" content={post.imageAlt ?? post.title} />
+        {post.imageWidth && (
+          <meta property="og:image:width" content={String(post.imageWidth)} />
+        )}
+        {post.imageHeight && (
+          <meta property="og:image:height" content={String(post.imageHeight)} />
+        )}
         {post.publishedAt && (
           <meta property="article:published_time" content={post.publishedAt} />
+        )}
+        {(post.updatedAt ?? post.publishedAt) && (
+          <meta property="article:modified_time" content={post.updatedAt ?? post.publishedAt} />
         )}
         <meta property="article:section" content={post.category} />
         {post.tags?.map((tag) => (
@@ -162,12 +259,13 @@ const BlogPost = () => {
         {post.tags?.length ? (
           <meta name="keywords" content={post.tags.join(", ")} />
         ) : null}
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.metaTitle ?? post.title} />
         <meta name="twitter:description" content={post.metaDescription ?? post.excerpt} />
         <meta name="twitter:image" content={post.image} />
-        {articleSchema && (
-          <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
-        )}
+        <meta name="twitter:image:alt" content={post.imageAlt ?? post.title} />
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
       <Navbar />
 

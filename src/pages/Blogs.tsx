@@ -6,17 +6,62 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/sections/FooterSection";
 import { blogPosts } from "@/data/blogs";
 
+const siteUrl = "https://socialbuzzz18.in";
+
 const Blogs = () => {
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${siteUrl}/blogs#blog`,
+    name: "Social Buzzz Blog",
+    url: `${siteUrl}/blogs`,
+    description:
+      "Insights, tips, and strategies to help your brand grow on social media.",
+    inLanguage: "en-IN",
+    publisher: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Social Buzzz",
+      url: siteUrl,
+      logo: `${siteUrl}/IMG_0210.JPG`,
+    },
+    blogPost: blogPosts.map((post) => ({
+      "@type": "BlogPosting",
+      "@id": `${siteUrl}/blogs/${post.id}#blog-posting`,
+      headline: post.title,
+      url: `${siteUrl}/blogs/${post.id}`,
+      description: post.metaDescription ?? post.excerpt,
+      datePublished: post.publishedAt,
+      dateModified: post.updatedAt ?? post.publishedAt,
+      image: post.image,
+      keywords: post.tags ?? [],
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Blogs — Social Buzzz | Social Media Marketing Tips &amp; Strategies</title>
         <meta name="description" content="Insights, tips, and strategies to help your brand grow on social media. Instagram growth, video marketing, Google Ads, Meta Ads, influencer marketing and more." />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <link rel="canonical" href={`${siteUrl}/blogs`} />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Social Buzzz Blog RSS Feed"
+          href={`${siteUrl}/feed.xml`}
+        />
         <meta property="og:title" content="Blogs — Social Buzzz | Social Media Marketing Tips &amp; Strategies" />
         <meta property="og:description" content="Insights, tips, and strategies to help your brand grow on social media." />
-        <meta property="og:url" content="https://socialbuzzz18.in/blogs" />
+        <meta property="og:url" content={`${siteUrl}/blogs`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Social Buzzz" />
+        <meta property="og:image" content={`${siteUrl}/IMG_0210.JPG`} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blogs — Social Buzzz | Social Media Marketing Tips &amp; Strategies" />
         <meta name="twitter:description" content="Insights, tips, and strategies to help your brand grow on social media." />
+        <meta name="twitter:image" content={`${siteUrl}/IMG_0210.JPG`} />
+        <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
       </Helmet>
       <Navbar />
 
@@ -61,7 +106,7 @@ const Blogs = () => {
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
                       src={post.image}
-                      alt={post.title}
+                      alt={post.imageAlt ?? post.title}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

@@ -4,9 +4,6 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://socialbuzzz18.in/</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
     <image:image>
       <image:loc>https://socialbuzzz18.in/IMG_0210.JPG</image:loc>
       <image:title>Social Buzzz social media marketing agency</image:title>
@@ -14,16 +11,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://socialbuzzz18.in/blogs</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://socialbuzzz18.in/blogs/1</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1724754610099-b11b5a9efcd5?q=85&amp;w=2400&amp;auto=format&amp;fit=crop</image:loc>
       <image:title>10 Skills You Need to Become a Great Social Media Manager</image:title>
